@@ -15,7 +15,10 @@ if operation in ['+', '-', '*', '/']:
     elif operation == "*":
         answer = n1 * n2
     elif operation == "/":
-        answer = n1 / n2
+        if n2 == 0:
+            answer = 0
+        else:
+            answer = n1 / n2
     print(answer)
     print(type(answer))
 else:
