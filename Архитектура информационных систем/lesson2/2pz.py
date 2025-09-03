@@ -7,7 +7,7 @@ n1 = int(input("Введи первое число: "))
 n2 = int(input("Введи второе число: "))
 
 operations = ['+', '-', '*', '/']
-operation = input(f"Какую операцию хочешь выполнить? {operations}: ")
+operation = input(f"Какую операцию хочешь выполнить? ({', '.join(operations)}): ")
 
 if operation in operations:
     if operation == operations[0]:
@@ -24,4 +24,4 @@ if operation in operations:
     print(answer)
     print(type(answer))
 else:
-    print(f">> [ОШИБКА] Указана некорректная операция {operations}")
+    print(f">> [ОШИБКА] Указана некорректная операция ({', '.join(operations)})")
