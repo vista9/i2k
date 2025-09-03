@@ -5,16 +5,18 @@
 
 n1 = int(input("Введи первое число: "))
 n2 = int(input("Введи второе число: "))
-operation = input("Какую операцию хочешь выполнить? [+, -, *, /]: ")
 
-if operation in ['+', '-', '*', '/']:
-    if operation == "+":
+operations = ['+', '-', '*', '/']
+operation = input(f"Какую операцию хочешь выполнить? {operations}: ")
+
+if operation in operations:
+    if operation == operations[0]:
         answer = n1 + n2
-    elif operation == "-":
+    elif operation == operations[1]:
         answer = n1 - n2
-    elif operation == "*":
+    elif operation == operations[2]:
         answer = n1 * n2
-    elif operation == "/":
+    elif operation == operations[3]:
         if n2 == 0:
             answer = 0
         else:
@@ -22,4 +24,4 @@ if operation in ['+', '-', '*', '/']:
     print(answer)
     print(type(answer))
 else:
-    print(">> [ОШИБКА] Указана некорректная операция")
+    print(f">> [ОШИБКА] Указана некорректная операция {operations}")
